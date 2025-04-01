@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI工具与开发资源导航</title>
+  <meta name="description" content="收集AI工具、开发资源、模板和学习资料的导航站">
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2980b9;
+      --background-color: #f9f9f9;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --border-color: #e0e0e0;
+      --hover-color: #f5f5f5;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    .section {
+      margin-bottom: 3rem;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-color);
+      color: var(--secondary-color);
+    }
+    
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    
+    .card-description {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+    
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      background-color: var(--card-bg);
+      border-top: 1px solid var(--border-color);
+    }
+    
+    @media (max-width: 768px) {
+      .cards {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .search-container {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .search-box {
+      width: 100%;
+      max-width: 600px;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 30px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    
+    .search-box:focus {
+      border-color: var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>AI工具与开发资源导航</h1>
+      <p class="subtitle">汇集优质AI工具、开发模板与学习资源</p>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="search-container">
+      <input type="text" class="search-box" id="searchBox" placeholder="搜索资源..." onkeyup="searchResources()">
+    </div>
+    
+    <!-- 需求调研工具 -->
+    <section class="section" id="research-tools">
+      <h2 class="section-title">需求调研工具</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">关键词调研</h3>
+          <p class="card-description">收集谷歌下拉词与关键词难度分析工具</p>
+          <a href="https://www.searchsuggest.tips/" target="_blank">Search Suggest Tips</a><br>
+          <a href="https://ahrefs.com/keyword-difficulty" target="_blank">Ahrefs 关键词难度</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">AI工具榜单</h3>
+          <p class="card-description">按收入排名的AI工具榜单</p>
+          <a href="https://www.toolify.ai/Best-AI-Tools-revenue" target="_blank">Toolify AI榜单</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">需求列表</h3>
+          <p class="card-description">AI导航站的用户需求列表</p>
+          <a href="https://theresanaiforthat.com/requests" target="_blank">There's an AI for That</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 域名与托管服务 -->
+    <section class="section" id="domain-hosting">
+      <h2 class="section-title">域名与托管服务</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">域名查询</h3>
+          <p class="card-description">快速查找可用的域名</p>
+          <a href="https://leandomainsearch.com/" target="_blank">Lean Domain Search</a><br>
+          <a href="https://query.domains/" target="_blank">Query Domains</a><br>
+          <a href="https://instantdomainsearch.com/" target="_blank">Instant Domain Search</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">域名注册</h3>
+          <p class="card-description">可靠的域名注册服务商</p>
+          <a href="https://spaceship.com" target="_blank">Spaceship</a><br>
+          <a href="https://porkbun.com" target="_blank">Porkbun</a><br>
+          <a href="https://namecheap.com" target="_blank">Namecheap</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">代码与网站托管</h3>
+          <p class="card-description">代码仓库与网站托管平台</p>
+          <a href="https://github.com" target="_blank">GitHub</a><br>
+          <a href="https://cloudflare.com" target="_blank">Cloudflare</a><br>
+          <a href="https://vercel.com" target="_blank">Vercel</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 数据分析工具 -->
+    <section class="section" id="analytics-tools">
+      <h2 class="section-title">数据分析工具</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">搜索引擎工具</h3>
+          <p class="card-description">网站索引与流量分析</p>
+          <a href="https://search.google.com/search-console" target="_blank">Google Search Console</a><br>
+          <a href="https://analytics.google.com/analytics/web/" target="_blank">Google Analytics</a><br>
+          <a href="https://www.bing.com/webmasters/submiturl" target="_blank">Bing Webmaster</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 竞品研究工具 -->
+    <section class="section" id="competitor-research">
+      <h2 class="section-title">竞品研究工具</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">流量与关键词分析</h3>
+          <p class="card-description">分析竞争对手的流量与关键词</p>
+          <a href="https://aitdk.com" target="_blank">AITDK</a><br>
+          <a href="https://semrush.com" target="_blank">SEMrush</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">外链分析</h3>
+          <p class="card-description">查看网站外链情况</p>
+          <a href="https://ahrefs.com/free-seo-tools" target="_blank">Ahrefs 免费工具</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 网站开发模板 -->
+    <section class="section" id="dev-templates">
+      <h2 class="section-title">网站开发模板</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">Next.js 模板</h3>
+          <p class="card-description">Next.js框架的网站模板</p>
+          <a href="https://github.com/ixartz/Next-js-Boilerplate" target="_blank">Next.js 15 Boilerplate</a><br>
+          <a href="https://github.com/ixartz/SaaS-Boilerplate" target="_blank">SaaS Boilerplate</a><br>
+          <a href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template" target="_blank">Next.js Landing Page</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Cloudflare 模板</h3>
+          <p class="card-description">基于Cloudflare的动态博客</p>
+          <a href="https://github.com/openRin/Rin" target="_blank">Dynamic Blog (Cloudflare)</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Astro 模板</h3>
+          <p class="card-description">Astro框架的响应式博客模板</p>
+          <a href="https://github.com/ixartz/Astro-boilerplate" target="_blank">Astro Boilerplate</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">落地页模板</h3>
+          <p class="card-description">多用途落地页模板</p>
+          <a href="https://github.com/weijunext/landing-page-boilerplate" target="_blank">Landing Page Boilerplate</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">SaaS 模板</h3>
+          <p class="card-description">SaaS应用程序起始模板</p>
+          <a href="https://github.com/wasp-lang/open-saas/" target="_blank">Open SaaS Starter</a><br>
+          <a href="https://github.com/ocluf/justship" target="_blank">JustShip (Svelte)</a><br>
+          <a href="https://github.com/JavascriptMick/supanuxt-saas" target="_blank">SupaNuxt SaaS</a><br>
+          <a href="https://github.com/saasfly/saasfly" target="_blank">SaasFly</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">AI项目模板</h3>
+          <p class="card-description">AI相关项目的开源模板</p>
+          <a href="https://github.com/ai-aigc-studio/Viggle-AI-WebUI" target="_blank">Viggle AI WebUI</a><br>
+          <a href="https://github.com/weijunext/smart-excel-ai" target="_blank">Smart Excel AI</a><br>
+          <a href="https://github.com/Pwntus/change-hairstyle-ai" target="_blank">Change Hairstyle AI</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 导航站模板 -->
+    <section class="section" id="nav-templates">
+      <h2 class="section-title">导航站模板</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">开源导航模板</h3>
+          <p class="card-description">快速搭建导航网站的开源模板</p>
+          <a href="https://github.com/fre123-com/fre123-nav/" target="_blank">FRE123 导航</a><br>
+          <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">WebStack 导航</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">AI工具导航</h3>
+          <p class="card-description">AI工具目录与GPTs商店</p>
+          <a href="https://github.com/6677-ai/tap4-ai-webui" target="_blank">Tap4 AI WebUI</a><br>
+          <a href="https://github.com/all-in-aigc/gpts-works" target="_blank">GPTs Store</a><br>
+          <a href="https://github.com/DokeyAI/dokeyai-data" target="_blank">DokeyAI 数据</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">UI库导航</h3>
+          <p class="card-description">Vue/Nuxt UI库选择器</p>
+          <a href="https://github.com/ddahan/ui-libs" target="_blank">UI Libs Picker</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">开源项目展示</h3>
+          <p class="card-description">优秀开源项目展示平台</p>
+          <a href="https://github.com/dubinc/oss-gallery" target="_blank">OSS Gallery</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">模板中心</h3>
+          <p class="card-description">Vercel提供的网站模板</p>
+          <a href="https://vercel.com/templates" target="_blank">Vercel模板中心</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 学习资源 -->
+    <section class="section" id="learning-resources">
+      <h2 class="section-title">学习资源</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">SEO学习</h3>
+          <p class="card-description">SEO基础知识与最佳实践</p>
+          <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=zh-cn" target="_blank">Google搜索中心</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">趋势与报告</h3>
+          <p class="card-description">行业趋势与创业报告</p>
+          <a href="https://ahrefs.com/websites#trending" target="_blank">Ahrefs 热门网站</a><br>
+          <a href="https://docs.google.com/spreadsheets/d/1QOdqq9KbjQj1JZO43vc1pir2rnEEsMUXzTDATrOCn2k/edit?gid=0#gid=0" target="_blank">AI Video SaaS工具</a><br>
+          <a href="https://docs.google.com/spreadsheets/d/1eUni44pIURML2VWFFXKzNmm-WKuuam9_ynr5Fo_Q74M/edit?gid=83151001#gid=83151001" target="_blank">Solopreneur报告</a>
+        </div>
+        <div class="card">
+          <h3 class="card-title">社区讨论</h3>
+          <p class="card-description">创业与副业相关讨论</p>
+          <a href="https://liberating-doll-b8a.notion.site/Reddit-1a8e8aed91b18021839ecba8b74e530b" target="_blank">Reddit子社区</a><br>
+          <a href="https://www.500mrr.com/" target="_blank">500MRR</a><br>
+          <a href="https://news.ycombinator.com/item?id=42373343" target="_blank">HN: 副业月入$500讨论</a>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <p>© 2025 AI工具与开发资源导航 | 收集整理了各类AI工具、开发模板与学习资源</p>
+    </div>
+  </footer>
+  
+  <script>
+    function searchResources() {
+      const searchInput = document.getElementById('searchBox').value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+      
+      cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        const description = card.querySelector('.card-description').textContent.toLowerCase();
+        const links = Array.from(card.querySelectorAll('a')).map(link => link.textContent.toLowerCase());
+        
+        const content = title + ' ' + description + ' ' + links.join(' ');
+        
+        if (content.includes(searchInput) || searchInput === '') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      // 隐藏空的section
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        const visibleCards = section.querySelectorAll('.card[style="display: block"]').length;
+        const allCardsHidden = section.querySelectorAll('.card[style="display: none"]').length === section.querySelectorAll('.card').length;
+        
+        if (allCardsHidden) {
+          section.style.display = 'none';
+        } else {
+          section.style.display = 'block';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
